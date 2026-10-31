@@ -1,0 +1,35 @@
+ip dhcp excluded-address 192.168.9.1
+ip dhcp excluded-address 192.168.10.1
+!
+ip dhcp pool staff
+ network 192.168.9.0 255.255.255.0
+ default-router 192.168.9.1
+ dns-server 192.168.9.1
+ip dhcp pool student
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.1
+ dns-server 192.168.10.1
+
+
+interface Serial0/2/0
+ ip address 10.10.10.2 255.255.255.252
+!
+interface Serial0/2/1
+ no ip address
+ clock rate 2000000
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router rip
+ version 2
+ network 10.0.0.0
+ network 192.168.9.0
+ network 192.168.10.0
+!
+ip classless
+ip route 192.168.9.0 255.255.255.0 172.16.1.2 
+ip route 192.168.10.0 255.255.255.0 172.16.1.2 
+ip route 0.0.0.0 0.0.0.0 10.10.10.1 

@@ -1,0 +1,17 @@
+interface Serial0/2/0
+ ip address 10.10.10.6 255.255.255.252
+!
+interface Serial0/2/1
+ no ip address
+ clock rate 2000000
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router rip
+ version 2
+ network 10.0.0.0
+ network 20.0.0.0
+!

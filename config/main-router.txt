@@ -1,0 +1,77 @@
+!
+ip dhcp excluded-address 192.168.1.1
+ip dhcp excluded-address 192.168.2.1
+ip dhcp excluded-address 192.168.3.1
+ip dhcp excluded-address 192.168.4.1
+ip dhcp excluded-address 192.168.5.1
+ip dhcp excluded-address 192.168.6.1
+ip dhcp excluded-address 192.168.7.1
+ip dhcp excluded-address 192.168.8.1
+!
+ip dhcp pool admin
+ network 192.168.1.0 255.255.255.0
+ default-router 192.168.1.1
+ dns-server 192.168.1.1
+ip dhcp pool HR
+ network 192.168.2.0 255.255.255.0
+ default-router 192.168.2.1
+ dns-server 192.168.2.1
+ip dhcp pool Business
+ network 192.168.3.0 255.255.255.0
+ default-router 192.168.3.1
+ dns-server 192.168.3.1
+ip dhcp pool Finance
+ network 192.168.4.0 255.255.255.0
+ default-router 192.168.4.1
+ dns-server 192.168.4.1
+ip dhcp pool engineering
+ network 192.168.5.0 255.255.255.0
+ default-router 192.168.5.1
+ dns-server 192.168.5.1
+ip dhcp pool Art&Design
+ network 192.168.6.0 255.255.255.0
+ default-router 192.168.6.1
+ dns-server 192.168.6.1
+ip dhcp pool studentlab
+ network 192.168.7.0 255.255.255.0
+ default-router 192.168.7.1
+ dns-server 192.168.7.1
+ip dhcp pool IT
+ network 192.168.8.0 255.255.255.0
+ default-router 192.168.8.1
+ dns-server 192.168.8.1
+
+
+
+interface Serial0/2/1
+ ip address 10.10.10.5 255.255.255.252
+ clock rate 64000
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router rip
+ version 2
+ network 10.0.0.0
+ network 192.168.1.0
+ network 192.168.2.0
+ network 192.168.3.0
+ network 192.168.4.0
+ network 192.168.5.0
+ network 192.168.6.0
+ network 192.168.7.0
+ network 192.168.8.0
+!
+ip classless
+ip route 192.168.1.0 255.255.255.0 172.16.2.2 
+ip route 192.168.2.0 255.255.255.0 172.16.2.2 
+ip route 192.168.3.0 255.255.255.0 172.16.2.2 
+ip route 192.168.4.0 255.255.255.0 172.16.2.2 
+ip route 192.168.5.0 255.255.255.0 172.16.2.2 
+ip route 192.168.6.0 255.255.255.0 172.16.2.2 
+ip route 192.168.7.0 255.255.255.0 172.16.2.2 
+ip route 192.168.8.0 255.255.255.0 172.16.2.2 
+ip route 192.168.9.0 255.255.255.0 172.16.2.2 
+ip route 192.168.9.0 255.255.255.0 10.10.10.2 
+ip route 192.168.10.0 255.255.255.0 10.10.10.2 
