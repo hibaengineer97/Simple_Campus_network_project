@@ -29,7 +29,7 @@ Multi-building campus network with VLANs, DHCP relay (`ip helper-address`) and i
 | Art & Design | 60 | 192.168.6.0/24 | 192.168.6.1 |
 | Student Lab | 70 | 192.168.7.0/24 | 192.168.7.1 |
 | IT | 80 | 192.168.8.0/24 | 192.168.8.1 |
-| Staff | 9 | 192.168.9.0/24 | 192.168.9.1 |
+| Staff | 90 | 192.168.9.0/24 | 192.168.9.1 |
 | Student Lab (Health & Science) | 100 | 192.168.10.0/24 | 192.168.10.1 |
 
 | Link | Network |
