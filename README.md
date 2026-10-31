@@ -8,8 +8,8 @@ Multi-building campus network with VLANs, DHCP relay (`ip helper-address`) and i
 
 ### Content
 - `packet-tracer/`: project file (.pkt)
-- `configs/`: router and switch configurations
-- `docs/LIVRABLE_miniprojet1.pdf`: full report (in French)
+- `config/`: router and switch configurations
+- `docs/LIVRABLE_miniprojet1 (1).pdf`: full report (in French)
 - `screenshots/`: topology and tests
 
 ### Summary
@@ -57,8 +57,8 @@ Réseau de campus multi-bâtiments avec VLANs, DHCP via relais (`ip helper-addre
 
 ### Contenu
 - `packet-tracer/` : fichier du projet (.pkt)
-- `configs/` : configurations des routeurs et des switchs
-- `docs/LIVRABLE_miniprojet1.pdf` : rapport complet (en français)
+- `config/` : configurations des routeurs et des switchs
+- `docs/LIVRABLE_miniprojet1 (1).pdf` : rapport complet (en français)
 - `screenshots/` : topologie et tests
 
 ### Résumé
